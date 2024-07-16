@@ -1,0 +1,23 @@
+#bghome{
+    background-image: url("./green-lines.png");
+    background-repeat: no-repeat;
+    background-size:20%;
+
+}
+#home_third{
+    /* background-color: #022c60; */
+    background-color: #8D77AB;
+    /* background-color: #F2931C; */
+}
+#home_fourth{
+    background-color: #e3dfd6d8;
+}
+#homecard{
+    color:#8D77AB;
+}
+#imageservice{
+    box-shadow:0px 20px 25px -5px #8D77AB ;
+}
+#home_bg{
+    background-color: #E3DFD6;
+}

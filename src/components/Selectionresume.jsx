@@ -1,0 +1,78 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from '../components/images/logo3.png';
+import upload from '../components/images/upload.png';
+import edit from '../components/images/edit.png';
+import UploadScreen from "../components/loadingscreens/uploadscreen";
+import Footer from "./Footer";
+
+function Selectionresume() {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const handleClick2 = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate('uploadresume');
+    }, 5000);
+  };
+
+  const handleClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate('form');
+    }, 5000);
+  };
+
+  return (
+    <>
+      {loading ? (
+        <UploadScreen />
+      ) : (
+        <>
+          <div className="flex justify-between p-2 h-14 bg-primary text-secondary">
+            <img src={logo} alt="Logo" className="w-32" />
+          </div>
+          <div className="h-screen flex flex-col items-center">
+            <div className="text-center my-10">
+              <h1 className="font-bold text-3xl mb-3">Are you uploading an existing resume?</h1>
+              <h6 className="text-sm font-medium text-slate-500">
+                Just review, edit, and update it with new information
+              </h6>
+            </div>
+
+            <div className="flex flex-col md:flex-row text-center justify-center gap-10">
+              <button onClick={handleClick2} className="my-10 p-4 md:my-0 border rounded-md border-gray-400">
+                <div className="p-4">
+                  <img src={upload} alt="Upload" className="h-12 mx-auto mb-4" />
+                  <h1 className="font-bold text-lg mb-2 text-slate-700">Yes, upload from my resume</h1>
+                  <h6 className="text-xs">
+                    We'll give you expert guidance to fill out your info
+                    <br />
+                    and enhance your resume, from start to finish
+                  </h6>
+                </div>
+              </button>
+              <button onClick={handleClick} className="my-10 p-4 md:my-0 border rounded-md border-gray-400">
+                <div className="p-4">
+                  <img src={edit} alt="Edit" className="h-12 mx-auto mb-4" />
+                  <h1 className="font-bold text-lg mb-2 text-slate-700">No, start from scratch</h1>
+                  <h6 className="text-xs">
+                    We'll guide you through the whole process so your
+                    <br />
+                    skills can shine
+                  </h6>
+                </div>
+              </button>
+            </div>
+          </div>
+          {/* <Footer /> */}
+        </>
+      )}
+    </>
+  );
+}
+
+export default Selectionresume;
