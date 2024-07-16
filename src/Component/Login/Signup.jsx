@@ -415,7 +415,7 @@
 //     }
 //    console.log("Data" , formData)
 //     try {
-//       const response = await axios.post("https://api.abroadium.com/api/jobseeker/auth/signup", formData, 
+//       const response = await axios.post("https://api.perfectresume.ca/api/user/auth/signup", formData, 
 //         {
 //           headers: {
 //             "Content-Type": "application/json",

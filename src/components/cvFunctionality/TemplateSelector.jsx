@@ -132,16 +132,7 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate, onImageUpload
         </div>
       )}
 
-      {/* Optional: File upload input for image selection */}
-      <input type="file" accept="image/*" onChange={handleImageChange} />
-
-      {/* Optional: Display uploaded image */}
-      {uploadedImage && (
-        <div className="mt-4">
-          <h3>Uploaded Image Preview:</h3>
-          <img src={URL.createObjectURL(uploadedImage)} alt="Uploaded" className="w-full h-auto max-h-36 object-cover rounded-lg" />
-        </div>
-      )}
+      
     </div>
   );
 };

@@ -11,7 +11,7 @@ const SectionAdd = ({ sectionadd = [], handleInputChange, addSectionAdd, addSect
   }, [sectionadd, addSectionAdd]);
 
   return (
-    <div className="mt-10 px-20">
+    <div className="mt-10 px-20 text-xs sm:text-xs md:text-xs lg:text-xs">
       <div>
         <h1 className='text-4xl font-semibold mb-3'>Do you have anything else to add?</h1>
         

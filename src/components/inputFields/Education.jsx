@@ -1,7 +1,7 @@
-const Education = ({ educations = [], handleInputChange, addEducation, deleteEducation }) => {
+const Education = ({ educations = [], handleInputChange, addEducation, deleteEducation ,schoolname,schoolplace,coursename}) => {
   return (
 
-    <div className="mt-10 px-20">
+    <div className="mt-10 px-20 text-xs sm:text-xs md:text-xs lg:text-xs">
       <h3 className="flex justify-between font-bold text-lg mt-4">Awards and Training, Education, 
     Certifications, and Accolades:</h3>
 
@@ -25,7 +25,7 @@ and Awards, Degrees, Certifications, Trainings, Recognitions, Awards and Accolad
           type="text" 
           name="schoolname" 
           required
-          value={edu.schoolname}
+          value={edu.schoolname || schoolname}
               onChange={(e) => handleInputChange(e, index, 'educations')} 
           placeholder="e.g. Delhi University" 
           className="w-full p-3 mb-4 border border-black rounded-lg"
@@ -41,7 +41,7 @@ and Awards, Degrees, Certifications, Trainings, Recognitions, Awards and Accolad
         <input 
           type="text" 
           name="schoolplace" 
-          value={edu.schoolplace}
+          value={edu.schoolplace || schoolplace}
               onChange={(e) => handleInputChange(e, index, 'educations')}
           placeholder="e.g. Delhi, India" 
           className="w-full p-3 mb-4 border border-black rounded-lg"
@@ -55,7 +55,7 @@ Field Of Study
 <input 
           type="text" 
           name="coursename" 
-          value={edu.coursename}
+          value={edu.coursename || coursename}
               onChange={(e) => handleInputChange(e, index, 'educations')}
           placeholder="e.g. Financial Accounting" 
           className="w-full p-3 mb-4 border border-black rounded-lg"

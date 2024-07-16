@@ -14,7 +14,7 @@ function Selectionresume() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      navigate('uploadresume');
+      navigate('/dashboard/uploadresume');
     }, 5000);
   };
 
@@ -22,7 +22,7 @@ function Selectionresume() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      navigate('form');
+      navigate('/dashboard/form');
     }, 5000);
   };
 
@@ -32,9 +32,7 @@ function Selectionresume() {
         <UploadScreen />
       ) : (
         <>
-          <div className="flex justify-between p-2 h-14 bg-primary text-secondary">
-            <img src={logo} alt="Logo" className="w-32" />
-          </div>
+         
           <div className="h-screen flex flex-col items-center">
             <div className="text-center my-10">
               <h1 className="font-bold text-3xl mb-3">Are you uploading an existing resume?</h1>
