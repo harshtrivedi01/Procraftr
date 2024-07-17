@@ -61,8 +61,8 @@ const predefinedText = {
     },
 
   skills: { 
-    skillname: '● Technical Skills', 
-    skilldetails: '● Industry Knowledge'
+    skillname: 'Technical Skills', 
+    skilldetails: ' Industry Knowledge'
    },
   
 };
