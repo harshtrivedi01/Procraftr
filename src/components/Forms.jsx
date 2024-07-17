@@ -393,7 +393,7 @@ useEffect(() => {
 return (<div>
    {resumeData?(<><div className="h-screen">
     {!isPreviewing ? (
-      <>
+      <> {showComponent && screenComponents[sectionsList[currentStep]]}
       {console.log(id,'testfo rid',location,'dasd')}
       <div className="flex flex-col sm:flex-row justify-between  rounded-lg ">
   <button
@@ -429,7 +429,7 @@ return (<div>
           <div className="flex w-full sm:w-full justify-end">
             <div className="absolute h-screen ">
               {/* Conditionally render the screen component based on the current section */}
-              {showComponent && screenComponents[sectionsList[currentStep]]}
+             
             </div>
             <div className="w-3/6 p-3 h-screen">
           
@@ -581,7 +581,7 @@ start_date={resumeData.employmenthistory[0]?.start_date}
     )}
   
   </div></>):(<>
-    <div className="h-screen">
+    <div className="absoluteh-screen "> {showComponent && screenComponents[sectionsList[currentStep]]}
     {!isPreviewing ? (
       <>
         {console.log(id,'testfo dsdsrid')}
@@ -633,7 +633,7 @@ start_date={resumeData.employmenthistory[0]?.start_date}
           <div className="flex w-full sm:w-full justify-end">
             <div className="absolute h-screen ">
               {/* Conditionally render the screen component based on the current section */}
-              {showComponent && screenComponents[sectionsList[currentStep]]}
+             
             </div>
             <div className="w-3/6  h-screen">
           

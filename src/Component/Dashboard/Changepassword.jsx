@@ -27,7 +27,7 @@ function Changepassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios({
-      method: "POST",
+      method: "PUT",
       url: "https://api.perfectresume.ca/api/user/change-password",
       headers: {
         Authorization: token,
@@ -46,6 +46,7 @@ function Changepassword() {
   return (
     <>
       <div className="bg-white min-h-screen p-4">
+        
         <div className="bg-white p-8 rounded shadow">
           <div className="flex justify-between items-center mb-6">
             <h5 className="text-2xl font-bold uppercase">🔐 Change Password</h5>

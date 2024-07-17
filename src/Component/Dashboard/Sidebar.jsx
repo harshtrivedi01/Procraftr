@@ -69,8 +69,8 @@ const Sidebar = ({ onClose }) => {
         </li>
         <li>
           <Link
-            to="skill-test"
-            className={getLinkClassName("/dashboard/skill-test")}
+            to="skilltest"
+            className={getLinkClassName("/dashboard/skilltest")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">📝</span>
@@ -111,7 +111,7 @@ const Sidebar = ({ onClose }) => {
           
           <Link
             to="/"
-            className="flex items-center p-2 hover:bg-violet-900  border-b-2 rounded font-semibold "
+            className="flex items-center p-2 hover:bg-violet-900  border-b-2 rounded font-semibold"
             onClick={() => { handleLogout(); }}>  
           
             <span className="mr-2 ">🔓</span>

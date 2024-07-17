@@ -135,7 +135,7 @@ const Navbar = () => {
         };
 
         const response = await axios.post(
-          'https://api.abroadium.com/api/jobseeker/file-based-ai',
+          'https://api.perfectresume.ca/api/user/file-based-ai',
           requestBody,
           {
             headers: {

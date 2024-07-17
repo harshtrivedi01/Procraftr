@@ -26,6 +26,8 @@ import Notification from "./Component/Dashboard/Notification.jsx";
 import Payment from "./Component/Dashboard/Payment.jsx";
 import Addreferall from "./Component/Dashboard/Addreferall.jsx";
 import Changepassword from "./Component/Dashboard/Changepassword.jsx";
+import Skills from "./Component/Dashboard/Skilltest/Skills.jsx";
+import Testpaper from "./Component/Dashboard/Skilltest/Testpaper.jsx";
 
 const route = createBrowserRouter([
   {
@@ -80,6 +82,7 @@ const route = createBrowserRouter([
             path: "changepassword",
             element: <Changepassword />,
           },
+          
           {
             path: "ai-resume-builder",
             element: <Selectionresume />,
@@ -92,6 +95,15 @@ const route = createBrowserRouter([
             path: "form",
             element: <Form />,
           },
+          {
+            path: "skilltest",
+            element: <Skills/>,
+          },
+          {
+            path:"testpaper/:skillId/:skillName",
+            element:<Testpaper/>
+    
+          }
         ],
       },
     ],

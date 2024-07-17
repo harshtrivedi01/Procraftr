@@ -3,7 +3,7 @@ import React from "react";
 
 function Educationscreen() {
     return (
-        <div className="bg-white pt-10 pb-96 pe-60 ms-80">
+        <div className="bg-white pt-10 pb-96 pe-40 ps-20 w-screen h-screen">
             <h1 className="font-semibold text-xl  mb-2 pe-96">Great, let’s work on your</h1>
             <h1 className="text-5xl font-semibold  mb-7">Education</h1>
             <h4 className="font-bold text-lg  mt-4  mb-3">Here’s what you need to know:</h4>
