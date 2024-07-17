@@ -395,18 +395,18 @@ return (<div>
     {!isPreviewing ? (
       <>
       {console.log(id,'testfo rid',location,'dasd')}
-      <div className="flex flex-col sm:flex-row justify-between border-2 p-1 bg-slate-300">
+      <div className="flex flex-col sm:flex-row justify-between  rounded-lg ">
   <button
     onClick={handlePrevious}
-    className="bg-white text-blue-800 border-blue-800 border-2 px-6 sm:px-10 py-2 rounded-full font-bold mb-2 sm:mb-0 hidden sm:block"
+    className="bg-white text-blue-800 border-blue-800 border-2 px-4 sm:px-5  rounded-lg font-bold mb-2 sm:mb-0 hidden sm:block"
     disabled={currentStep === 0}
   >
     Previous
   </button>
-  <div className="flex flex-wrap sm:flex-nowrap gap-3 items-center">
+  <div className="flex flex-wrap sm:flex-nowrap gap-4 items-center">
     {/* Fonts selector (hidden on mobile) */}
     <div className="font-semibold hidden sm:block">Fonts:</div>
-    <div className="flex gap-3 items-center hidden sm:flex">
+    <div className="flex gap-2 items-center hidden sm:flex">
       <FontSelector selectedFont={selectedFont} setSelectedFont={setSelectedFont} />
     </div>
     
@@ -418,7 +418,7 @@ return (<div>
   </div>
   <button
     onClick={handleNext}
-    className={`${currentStepColor} bg-yellow-500 px-6 sm:px-10 py-2 rounded-full font-bold`}
+    className={`${currentStepColor} bg-yellow-500 px-6 sm:px-6 py- me-3 rounded-lg font-bold`}
   >
     {screenNames[sectionsList[currentStep + 1]] || 'Preview'}
   </button>
@@ -585,18 +585,18 @@ start_date={resumeData.employmenthistory[0]?.start_date}
     {!isPreviewing ? (
       <>
         {console.log(id,'testfo dsdsrid')}
-      <div className="flex flex-col sm:flex-row justify-between border-2 p-1 bg-slate-300">
+      <div className="flex flex-col sm:flex-row justify-between  rounded-lg ">
   <button
     onClick={handlePrevious}
-    className="bg-white text-blue-800 border-blue-800 border-2 px-6 sm:px-10 py-2 rounded-full font-bold mb-2 sm:mb-0 hidden sm:block"
+    className="bg-white text-blue-800 border-blue-800 border-2 px-4 sm:px-5  rounded-lg font-bold mb-2 sm:mb-0 hidden sm:block"
     disabled={currentStep === 0}
   >
     Previous
   </button>
-  <div className="flex flex-wrap sm:flex-nowrap gap-3 items-center">
+  <div className="flex flex-wrap sm:flex-nowrap gap-4 items-center">
     {/* Fonts selector (hidden on mobile) */}
     <div className="font-semibold hidden sm:block">Fonts:</div>
-    <div className="flex gap-3 items-center hidden sm:flex">
+    <div className="flex gap-2 items-center hidden sm:flex">
       <FontSelector selectedFont={selectedFont} setSelectedFont={setSelectedFont} />
     </div>
     
@@ -608,14 +608,14 @@ start_date={resumeData.employmenthistory[0]?.start_date}
   </div>
   <button
     onClick={handleNext}
-    className={`${currentStepColor} bg-yellow-500 px-6 sm:px-10 py-2 rounded-full font-bold`}
+    className={`${currentStepColor} bg-yellow-500 px-6 sm:px-6  me-3 rounded-lg font-bold`}
   >
     {screenNames[sectionsList[currentStep + 1]] || 'Preview'}
   </button>
 </div>
 
         <div className="flex">
-        <div className="w-1/12 bg-[#333456] hidden md:block">
+        {/*<div className="w-1/12 bg-[#333456] hidden md:block">
             <Slider
               sectionsList={sectionsList}
               currentStep={currentStep}
@@ -629,13 +629,13 @@ start_date={resumeData.employmenthistory[0]?.start_date}
               isDetailsComplete5={isDetailsComplete5}
               isDetailsComplete6={isDetailsComplete6}
             />
-          </div>
+          </div> */}
           <div className="flex w-full sm:w-full justify-end">
             <div className="absolute h-screen ">
               {/* Conditionally render the screen component based on the current section */}
               {showComponent && screenComponents[sectionsList[currentStep]]}
             </div>
-            <div className="w-3/6 p-3 h-screen">
+            <div className="w-3/6  h-screen">
           
               {/* Render Active Section */}
               {(() => {

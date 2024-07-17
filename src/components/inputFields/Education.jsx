@@ -1,7 +1,7 @@
 const Education = ({ educations = [], handleInputChange, addEducation, deleteEducation ,schoolname,schoolplace,coursename}) => {
   return (
 
-    <div className="mt-10 px-20 text-xs sm:text-xs md:text-xs lg:text-xs">
+    <div className="mt-16 px-5 text-xs sm:text-xs md:text-xs lg:text-xs">
       <h3 className="flex justify-between font-bold text-lg mt-4">Awards and Training, Education, 
     Certifications, and Accolades:</h3>
 
@@ -18,7 +18,7 @@ and Awards, Degrees, Certifications, Trainings, Recognitions, Awards and Accolad
           <div className="flex gap-6">
   <div className="w-3/4">
 
-  <label htmlFor="schoolname" className="block text-sm text-gray-700 mb-2 font-bold">
+  <label htmlFor="schoolname" className="block text-xs text-gray-700 mb-2 font-bold">
            School Name *
         </label>
         <input 
@@ -35,7 +35,7 @@ and Awards, Degrees, Certifications, Trainings, Recognitions, Awards and Accolad
 
   <div className="w-3/4">
 
-  <label htmlFor="schoolplace" className="block text-sm  text-gray-700 mb-2 font-bold">
+  <label htmlFor="schoolplace" className="block text-xs  text-gray-700 mb-2 font-bold">
   School Location 
         </label>
         <input 
@@ -49,7 +49,7 @@ and Awards, Degrees, Certifications, Trainings, Recognitions, Awards and Accolad
         
   </div>
 </div>
-<label htmlFor="schoolplace" className="block text-sm  text-gray-700 mb-2 font-bold">
+<label htmlFor="schoolplace" className="block text-xs  text-gray-700 mb-2 font-bold">
 Field Of Study
         </label>
 <input 
@@ -64,7 +64,7 @@ Field Of Study
 <div className="flex gap-2 w-1/3 pe-2">
   <div className="w-3/4">
 
-  <label htmlFor="month1" className="block text-sm font-medium text-gray-700 mb-2">
+  <label htmlFor="month1" className="block text-xs font-medium text-gray-700 mb-2">
                   Start: 
         </label>
         <input 
@@ -78,7 +78,7 @@ Field Of Study
 
   <div className="w-3/4">
 
-  <label htmlFor="month2" className="block text-sm font-medium text-gray-700 mb-2">
+  <label htmlFor="month2" className="block text-xs font-medium text-gray-700 mb-2">
                End: 
         </label>
         <input 

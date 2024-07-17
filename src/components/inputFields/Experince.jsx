@@ -98,14 +98,14 @@ const Experience = ({
 
   return (
     <div className='mt-4 text-xs sm:text-xs md:text-xs lg:text-xs'>
-      <div className="px-20 w-full">
+      <div className="px-5 w-full">
         {experiences.map((exp, index) => (
           <div key={index} className="flex mt-4">
             <div className="w-full">
               <h6 className='font-bold text-xs my-10 '>* indicates a required field</h6>
-              <div className="flex gap-6">
+              <div className="flex gap-4">
                 <div className="w-3/4">
-                  <label htmlFor="Company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="Company" className="block text-xs font-medium text-gray-700 mb-2">
                     Who Did You Do This For?
                   </label>
                   <input 
@@ -118,7 +118,7 @@ const Experience = ({
                   />
                 </div>
                 <div className="w-3/4">
-                  <label htmlFor="role" className="block text-sm font-medium font-medium mb-2">
+                  <label htmlFor="role" className="block text-xs font-medium font-medium mb-2">
                     What Was Your Title? *
                   </label>
                   <input 
@@ -135,7 +135,7 @@ const Experience = ({
 
               <div className="flex gap-2 w-1/3 pe-2">
                 <div className="w-3/4">
-                  <label htmlFor="month1" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="month1" className="block text-xs font-medium text-gray-700 mb-2">
                     Start Date: 
                   </label>
                   <input 
@@ -148,7 +148,7 @@ const Experience = ({
                 </div>
 
                 <div className="w-3/4">
-                  <label htmlFor="month2" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="month2" className="block text-xs font-medium text-gray-700 mb-2">
                     End Date: 
                   </label>
                   <input 
@@ -178,7 +178,7 @@ const Experience = ({
               /> Currently Working
 
               <div className="w-3/4">
-                <label htmlFor="companyplace" className="block text-sm text-gray-900 mb-2 font-semibold">
+                <label htmlFor="companyplace" className="block text-xs text-gray-900 mb-2 font-semibold">
                   Company Location 
                 </label>
                 <input 

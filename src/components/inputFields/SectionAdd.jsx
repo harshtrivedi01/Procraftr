@@ -11,20 +11,20 @@ const SectionAdd = ({ sectionadd = [], handleInputChange, addSectionAdd, addSect
   }, [sectionadd, addSectionAdd]);
 
   return (
-    <div className="mt-10 px-20 text-xs sm:text-xs md:text-xs lg:text-xs">
+    <div className="mt-10 px-5 text-xs sm:text-xs md:text-xs lg:text-xs">
       <div>
-        <h1 className='text-4xl font-semibold mb-3'>Do you have anything else to add?</h1>
+        <h1 className='text-xl font-semibold mb-3'>Do you have anything else to add?</h1>
         
       </div>
       {(selectedTemplate === "Template1" || selectedTemplate === "Template2" || selectedTemplate === "Template4" || 
       selectedTemplate === "Template5" || selectedTemplate === "Template3" || selectedTemplate === "Template7" || selectedTemplate === "Template8"
       || selectedTemplate === "Template9" )&&(
-        <div><h1 className='text-lg'>These sections are optional.</h1>
+        <div><h1 className='text-sm'>These sections are optional.</h1>
           {sectionadd.map((section, index) => (
         <div key={index} className="relative mt-4 px-100">
           <div className="flex gap-6">
             <div className="w-3/4">
-              <label htmlFor="sectiontitle" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="sectiontitle" className="block text-xs font-medium text-gray-700 mb-2">
                 Title 
               </label>
               <input
@@ -37,7 +37,7 @@ const SectionAdd = ({ sectionadd = [], handleInputChange, addSectionAdd, addSect
               />
             </div>
             <div className="w-3/4">
-              <label htmlFor="sectionname" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="sectionname" className="block text-xs font-medium text-gray-700 mb-2">
                 Name
               </label>
               <input
@@ -51,7 +51,7 @@ const SectionAdd = ({ sectionadd = [], handleInputChange, addSectionAdd, addSect
             </div>
           </div>
           <div className="w-3/4">
-            <label htmlFor="sectiondescription" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="sectiondescription" className="block text-xs font-medium text-gray-700 mb-2">
               Description
             </label>
             <input

@@ -87,8 +87,8 @@ console.log(image);
   return (
     <>
       <div className="font-thin  text-xs sm:text-xs md:text-xs lg:text-xs">
-        <div className='px-10 mt-7'>
-          <h1 className='text-2xl font-semibold mb-3 '>What’s the best way for employers to contact you?</h1>
+        <div className='px-5 mt-7'>
+          <h1 className='text-xl font-semibold mb-3 '>What’s the best way for employers to contact you?</h1>
           <h1 className='text-xs'>We suggest including an email and phone number.</h1>
           <h6 className='font-bold text-xs my-4 '>* indicates a required field</h6>
         </div>
@@ -97,7 +97,7 @@ console.log(image);
         )}
         {details.map((del, index) => (
           <div key={index} className=" mt-8 ">
-            <div className="m-2 px-10  gap-3 w-full">
+            <div className="m-2 px-3 gap-3 w-full">
               <div className="">
                 <div className="flex gap-10 justify-around ">
                   <div className="w-3/5 justify-center px-10">

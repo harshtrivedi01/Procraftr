@@ -89,7 +89,7 @@ const Skills = ({ skills, handleInputChange, addSkill, deleteSkill, skillsfromap
   };
 
   return (
-    <div className="mt-10 px-10 text-xs sm:text-xs md:text-xs lg:text-xs">
+    <div className="mt-10 px-5 text-xs sm:text-xs md:text-xs lg:text-xs">
       <button className="font-bold text-lg flex items-center mb-4" onClick={() => setShowDropdown(!showDropdown)}>
         <h3>AI Assist</h3>
         <svg className="h-5 w-5 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -164,7 +164,7 @@ const Skills = ({ skills, handleInputChange, addSkill, deleteSkill, skillsfromap
           <div className="flex gap-6">
             <div className="w-3/4">
               <label htmlFor={`skillname-${index}`} className="block text-sm font-medium text-gray-700 mb-2">
-                Skill Name
+                Skills
               </label>
               <input
                 type="text"
@@ -172,14 +172,14 @@ const Skills = ({ skills, handleInputChange, addSkill, deleteSkill, skillsfromap
                 name="skillname"
                 value={skill.skillname}
                 onChange={(e) => handleSkillInputChange(e, index, 'skills')}
-                placeholder="Skill Name"
+                placeholder="Skills"
                 className="w-full p-3 mb-4 border border-black rounded-lg"
               />
             </div>
 
             <div className="w-3/4">
               <label htmlFor={`skilldetails-${index}`} className="block text-sm font-medium text-gray-700 mb-2">
-                Skill Details
+                Skills
               </label>
               <input
                 type="text"
@@ -187,7 +187,7 @@ const Skills = ({ skills, handleInputChange, addSkill, deleteSkill, skillsfromap
                 name="skilldetails"
                 value={skill.skilldetails}
                 onChange={(e) => handleSkillInputChange(e, index, 'skills')}
-                placeholder="Skill Details"
+                placeholder="Skills"
                 className="w-full p-3 mb-4 border border-black rounded-lg"
               />
             </div>

@@ -51,7 +51,7 @@ function Summary({ summary = [], handleInputChange, summaryname,location }) {
       {summary.length > 0 ? (
         summary.map((sum, index) => (
           <div key={index} className="flex mt-10 justify-center">
-            <div className="m-2 px-10 flex gap-3 w-3/">
+            <div className="m-2 px-5 flex gap-3 w-3/">
               <div>
                 <div className="flex justify-between font-bold text-lg my-4">
                   <h1 className="text-xl">Professional Summary</h1>
@@ -70,7 +70,7 @@ function Summary({ summary = [], handleInputChange, summaryname,location }) {
                     </button>
                   </div>
                 </div>
-                <div className="my-4 mb-10 font-normal">
+                <div className="my-4 mb-10 text-sm">
                   Write 2-5 Sentences that highlight the value you can provide to a team and organization. Mention your previous role, experience & most importantly - your biggest achievements, best qualities, and skills.
                 </div>
                 <ReactQuill

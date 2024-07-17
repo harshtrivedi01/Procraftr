@@ -148,20 +148,20 @@ console.log(skillsfromapi,'api',location)
   return (
     <div className='h- justify-center '>
       {console.log(id,"3232")}
-      <div className='flex justify-end border-2 p-1 bg-slate-300 '>
+      <div className='flex  '>
         <button
           onClick={() => setIsPreviewing(false)}
-          className="bg-white text-blue-800 border-blue-800 border-2 px-8 py-1 m-1 me-5 rounded-full font-bold "
+          className="bg-white text-blue-800 border-blue-800 border-2 px-6 py-0.5 rounded-lg font-bold "
         >
           Back
         </button>
       </div>
-      <div className='px-10 mt-7 '>
-        <h1 className='text-3xl font-bold mb-3 '>Review your resume</h1>
-        <h1 className='text-lg'>Review and make any final changes to your resume, then download or email yourself a copy and apply for jobs!</h1>
+      <div className='px-5 mt-4 '>
+        <h1 className='text-2xl font-bold mb-3 '>Review your resume</h1>
+        <h1 className='text-sm'>Review and make any final changes to your resume, then download or email yourself a copy and apply for jobs!</h1>
       </div>
-      <div className=' justify-center mb-40'>
-        <div className="w- pt-10 overflow-auto mb-10">
+      <div className='flex justify-center mb-40'>
+        <div className="w-3/4 pt-5 overflow-auto mb-10">
           <TemplateComponent
             ref={cvRef}
             data={formData}
@@ -178,11 +178,26 @@ console.log(skillsfromapi,'api',location)
           />
           {/* Render Additional Sections Input Fields */}
         </div>
-        <div className='flex justify-around'>
-<button
+        <div className='py-5 w-1/4 text-center'>
+          <div className='flex justify-around'>
+            <div className="justify-end ">
+              <PdfDownloadButton targetRef={cvRef} />
+            </div>
+            <div className=''>
+              <button
+                onClick={handlePrint}
+                className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-blue-500 rounded-lg group bg-blue-800 group-hover:bg-blue-950 border hover:text-white dark:text-blue focus:ring-2 focus:outline-none focus:ring-blue-100 dark:focus:ring-blue-100"
+              >
+                <span className="relative px-9 py-5 transition-all ease-in duration-75 bg-white dark:bg-gray-100 rounded-md group-hover:bg-opacity-0 font-bold">
+                  Print
+                </span>
+              </button>
+            </div>
+          </div>
+          <button
             type="button"
             onClick={updateResume}
-            className="ms-5 mt-5 mb-10 text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-bold rounded-full px-28 py-3 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 "
+            className=" mt-3  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-bold rounded-full px-20 py-3 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 "
           >
             Finish Resume
           </button>
@@ -196,30 +211,12 @@ console.log(skillsfromapi,'api',location)
         <button
           type="button"
           onClick={resumeScore}
-          className="ms-5 mt-5 mb-10 text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-bold rounded-full px-24 py-3 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 "
+          className=" mt-5  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-bold rounded-full px-16 py-3 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 "
         >
           Check the AI Score
         </button>
       )}
     </div>
-</div>
-        <div className=' '>
-          <div className='flex justify-around'>
-            <div className="justify-end mt-4">
-              <PdfDownloadButton targetRef={cvRef} />
-            </div>
-            <div className='mt-4'>
-              <button
-                onClick={handlePrint}
-                className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-blue-500 rounded-lg group bg-blue-800 group-hover:bg-blue-950 border hover:text-white dark:text-blue focus:ring-2 focus:outline-none focus:ring-blue-100 dark:focus:ring-blue-100"
-              >
-                <span className="relative px-9 py-5 transition-all ease-in duration-75 bg-white dark:bg-gray-100 rounded-md group-hover:bg-opacity-0 font-bold">
-                  Print
-                </span>
-              </button>
-            </div>
-          </div>
-          
 
           <FunctionalityOfCV
             selectedTemplate={selectedTemplate}

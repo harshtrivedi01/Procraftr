@@ -1,15 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = ({ onClose }) => {
+  const location = useLocation();
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Clear the token
+    setIsLoggedIn(false); // Update login state
+  };
+  const getLinkClassName = (path) => {
+    return location.pathname === path
+      ? "flex items-center p-2 bg-violet-900 border-b-2 rounded font-semibold text-white"
+      : "flex items-center p-2 hover:bg-violet-900  border-b-2 rounded font-semibold  ";
+  };
+
   return (
     <div className="bg-white h-screen p-4 border-r border-gray-200 md:block">
       {/* Sidebar links */}
       <ul className="space-y-2 mt-4">
         <li>
           <Link
+            to="/"
+            className={getLinkClassName("/")}
+            onClick={onClose} // Close sidebar on link click
+          >
+            <span className="mr-2">🖥️</span>
+            <span>Dashboard</span>
+          </Link>
+        </li>
+        <li>
+          <Link
             to="profile"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded font-semibold"
+            className={getLinkClassName("/dashboard/profile")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">👤</span>
@@ -19,7 +40,7 @@ const Sidebar = ({ onClose }) => {
         <li>
           <Link
             to="ai-resume-builder"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
+            className={getLinkClassName("/dashboard/ai-resume-builder")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">🤖</span>
@@ -29,17 +50,17 @@ const Sidebar = ({ onClose }) => {
         <li>
           <Link
             to="resumes"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
+            className={getLinkClassName("/dashboard/resumes")}
             onClick={onClose} // Close sidebar on link click
           >
-            <span className="mr-2"><i className="fa-regular fa-file"></i></span>
+            <span className="mr-2">📑</span>
             <span>My Resumes</span>
           </Link>
         </li>
         <li>
           <Link
-            to="notifications"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
+            to="notification"
+            className={getLinkClassName("/dashboard/notification")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">🔔</span>
@@ -49,7 +70,7 @@ const Sidebar = ({ onClose }) => {
         <li>
           <Link
             to="skill-test"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
+            className={getLinkClassName("/dashboard/skill-test")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">📝</span>
@@ -58,8 +79,8 @@ const Sidebar = ({ onClose }) => {
         </li>
         <li>
           <Link
-            to="add-referral"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
+            to="addreferall"
+            className={getLinkClassName("/dashboard/addreferall")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">👥</span>
@@ -69,7 +90,7 @@ const Sidebar = ({ onClose }) => {
         <li>
           <Link
             to="payment"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
+            className={getLinkClassName("/dashboard/payment")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">💳</span>
@@ -78,8 +99,8 @@ const Sidebar = ({ onClose }) => {
         </li>
         <li>
           <Link
-            to="change-password"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
+            to="Changepassword"
+            className={getLinkClassName("/dashboard/Changepassword")}
             onClick={onClose} // Close sidebar on link click
           >
             <span className="mr-2">🔑</span>
@@ -87,12 +108,13 @@ const Sidebar = ({ onClose }) => {
           </Link>
         </li>
         <li>
+          
           <Link
-            to="/logout"
-            className="flex items-center p-2 hover:bg-blue-200 border-b-2 rounded"
-            onClick={onClose} // Close sidebar on link click
-          >
-            <span className="mr-2">🚪</span>
+            to="/"
+            className="flex items-center p-2 hover:bg-violet-900  border-b-2 rounded font-semibold "
+            onClick={() => { handleLogout(); }}>  
+          
+            <span className="mr-2 ">🔓</span>
             <span>Log Out</span>
           </Link>
         </li>

@@ -30,7 +30,7 @@ const DashboardLayout = () => {
         </div>
 
         {/* Sidebar */}
-        <div className={`md:w-64 flex-shrink-0 md:block ms-40 ${isSidebarOpen ? 'block' : 'hidden'}`}>
+        <div className={`md:w-64 flex-shrink-0 md:block  ${isSidebarOpen ? 'block' : 'hidden'}`}>
           <Sidebar onClose={closeSidebar} />
         </div>
 

@@ -17,10 +17,10 @@ const MyResume = () => {
         setResumes(response.data.resumelist);
       })
       .catch(error => console.error('Error fetching resume list:', error));
-  }, [resumes]);
+  }, []);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 text-center" >
       <div className="overflow-x-auto">
         <table className="min-w-full bg-dark text-black rounded-md">
           <thead>

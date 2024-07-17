@@ -22,6 +22,10 @@ import MyResume from "./Component/Dashboard/MyResume.jsx";
 import Selectionresume from "./components/Selectionresume.jsx"; // Ensure this path is correct
 import Uploadresume from "./components/Uploadresume.jsx";
 import Form from "./components/Forms.jsx"; // Ensure this path is correct
+import Notification from "./Component/Dashboard/Notification.jsx";
+import Payment from "./Component/Dashboard/Payment.jsx";
+import Addreferall from "./Component/Dashboard/Addreferall.jsx";
+import Changepassword from "./Component/Dashboard/Changepassword.jsx";
 
 const route = createBrowserRouter([
   {
@@ -61,6 +65,22 @@ const route = createBrowserRouter([
             element: <MyResume />,
           },
           {
+            path: "notification",
+            element: <Notification />,
+          },
+          {
+            path: "payment",
+            element: <Payment />,
+          },
+          {
+            path: "addreferall",
+            element: <Addreferall />,
+          },
+          {
+            path: "changepassword",
+            element: <Changepassword />,
+          },
+          {
             path: "ai-resume-builder",
             element: <Selectionresume />,
           },
@@ -82,7 +102,7 @@ const route = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={route} />
-    <App />
+    {/*<App /> */}
     <Toaster />
   </React.StrictMode>
 );
