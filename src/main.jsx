@@ -28,6 +28,7 @@ import Addreferall from "./Component/Dashboard/Addreferall.jsx";
 import Changepassword from "./Component/Dashboard/Changepassword.jsx";
 import Skills from "./Component/Dashboard/Skilltest/Skills.jsx";
 import Testpaper from "./Component/Dashboard/Skilltest/Testpaper.jsx";
+import Paymentpage from "./Component/Dashboard/Paymentpage.jsx";
 
 const route = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const route = createBrowserRouter([
           {
             path: "payment",
             element: <Payment />,
+          },
+          {
+            path: "paymentpage",
+            element: <Paymentpage />,
           },
           {
             path: "addreferall",
