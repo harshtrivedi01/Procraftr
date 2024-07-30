@@ -117,6 +117,7 @@ const Sidebar = ({ onClose }) => {
             <span className="mr-2 ">🔓</span>
             <span>Log Out</span>
           </Link>
+          
         </li>
       </ul>
     </div>

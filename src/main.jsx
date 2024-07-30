@@ -30,6 +30,21 @@ import Skills from "./Component/Dashboard/Skilltest/Skills.jsx";
 import Testpaper from "./Component/Dashboard/Skilltest/Testpaper.jsx";
 import Paymentpage from "./Component/Dashboard/Paymentpage.jsx";
 
+import AdminLayout from './Component/Admin/Admin.jsx'
+import ProfileForm1 from "./Component/Admin/ProfileForm1.jsx";
+import MyResume1 from "./Component/Admin/MyResume1.jsx";
+
+import Notification1 from "./Component/Admin/Notification1.jsx";
+import Payment1 from "./Component/Admin/Payment1.jsx";
+import Addreferall1 from "./Component/Admin/Addreferall1.jsx";
+import Changepassword1 from "./Component/Admin/Changepassword1.jsx";
+import Refferallbycustomer from "./Component/Admin/Refferallbycustomer.jsx";
+import Paymentpage1 from "./Component/Admin/Paymentpage1.jsx";
+import AdminLogin from "./Component/Login/AdminLogin.jsx";
+import Self from "./Component/Admin/Self.jsx";
+
+
+
 const route = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +61,10 @@ const route = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "adminlogin",
+        element: <AdminLogin />,
       },
       {
         path: "signup",
@@ -109,6 +128,55 @@ const route = createBrowserRouter([
             element:<Testpaper/>
     
           }
+        ],
+      },
+
+      {
+        path: "admin",
+        element: <AdminLayout />,
+        children: [
+          {
+            path: "",
+            element: <Navigate to="profile1" replace />,
+          },
+          {
+            path: "profile1",
+            element: <ProfileForm1 />,
+          },
+          {
+            path: "resumes1",
+            element: <MyResume1 />,
+          },
+          {
+            path: "notification1",
+            element: <Notification1 />,
+          },
+          {
+            path: "payment1",
+            element: <Payment1 />,
+          },
+          {
+            path: "paymentpage1",
+            element: <Paymentpage1 />,
+          },
+          {
+            path: "addreferall1",
+            element: <Addreferall1 />,
+          },
+          {
+            path: "Refferallbycustomer",
+            element: <Refferallbycustomer />,
+          },
+          {
+            path: "self",
+            element: <Self />,
+          },
+          {
+            path: "changepassword1",
+            element: <Changepassword1 />,
+          },
+          
+          
         ],
       },
     ],
