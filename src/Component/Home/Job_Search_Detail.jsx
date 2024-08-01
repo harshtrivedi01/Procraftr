@@ -58,7 +58,7 @@ import '../Home/Home.css';
 const CourseDetail = ({ course }) => {
   return (
     <div id="course" className="bg-gray-100 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/*<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl lg:text-5xl font-bold px-4 lg:px-0 py-5 text-center">Newest Strategies From Our Career Search Advisors</h1>
         <p className="mx-auto px-4 lg:px-0 text-lg lg:text-base text-gray-700 max-w-4xl text-center mb-8">You’re never alone in your job search. Whether you’re writing a cover letter, preparing for the interview, or negotiating your salary, our resource center has articles that will help you take the next step in your career.</p>
         
@@ -68,7 +68,7 @@ const CourseDetail = ({ course }) => {
               <img src={card.img} alt="Course" className="w-full h-auto border-2 rounded-t-md" />
               <div className="p-4">
                 <h2 className="text-lg lg:text-xl font-bold mb-2">{card.title}</h2>
-                {/* <p className="text-sm text-gray-600">{card.name}</p> */}
+             * <p className="text-sm text-gray-600">{card.name}</p> *
               </div>
             </a>
           ))}
@@ -79,7 +79,7 @@ const CourseDetail = ({ course }) => {
             Get More Career Advice
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

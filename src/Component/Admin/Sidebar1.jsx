@@ -9,8 +9,8 @@ const Sidebar1 = ({ onClose }) => {
   };
   const getLinkClassName = (path) => {
     return location.pathname === path
-      ? "flex items-center p-2 bg-violet-900 border-b-2 rounded font-semibold text-white"
-      : "flex items-center p-2 hover:bg-violet-900  border-b-2 rounded font-semibold  ";
+      ? "flex items-center p-2 bg-pink-600 border-b-2 rounded font-semibold text-white"
+      : "flex items-center p-2 hover:bg-pink-700  border-b-2 rounded font-semibold  ";
   };
 
   return (

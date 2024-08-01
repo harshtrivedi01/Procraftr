@@ -24,7 +24,7 @@ const Footer = () => {
                 <br/>
                 <div className=' flex flex-wrap justify-around'>
                 <div className="w-full md:w-auto mb-6 md:mb-0" id='footer'>
-                    <h2 className="text-lg font-bold text-white">Perfect Resume</h2>
+                    <h2 className="text-lg font-bold text-white">ProCraftr</h2>
                     <ul>
                         <li><a href="#" className="">About Us</a></li>
                         <li><a href="#" className="">Careers</a></li>
@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="container text-base md:mx-auto text-center border-t border-white pt-6 mt-6">
-                <p className="text-white text-right">&copy; Copyright By PerfectResume.ca All Rights Reserved</p>
+                <p className="text-white text-right">&copy; Copyright By ProCraftr.ca All Rights Reserved</p>
             </div>
         </footer>
         </>

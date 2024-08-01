@@ -107,7 +107,7 @@ const  navigate = useNavigate()
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="">
-              <img src={logo} alt="logo" className="w-20 h-14" />
+              <img src={logo} alt="logo" className=" h-14" />
             </Link>
           </div>
           <div className="hidden md:flex justify-center items-center space-x-4" id="nav">

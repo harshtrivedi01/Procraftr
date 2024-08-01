@@ -53,9 +53,9 @@ function AdminLogin() {
   return (
     <>
       <div className="flex justify-center items-center h-screen w-full">
-        <div className="p-8 rounded-xl shadow-lg shadow-slate-700 w-full max-w-lg bg-gray-600">
+        <div className="p-8 rounded-xl shadow-lg shadow-slate-700 w-full max-w-lg bg-purple-800">
           <div className="flex justify-center mb-6">
-            <img src={logo} className="w-20 h-10" alt="Logo" />
+            <img src={logo} className=" h-10" alt="Logo" />
           </div>
           <div className="text-3xl text-white text-center font-bold mb-9">
           🛡️ Admin Login
@@ -87,7 +87,7 @@ function AdminLogin() {
           
             <button
               type="submit"
-              className="w-full bg-yellow-500 mt-10 text-white font-bold px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors duration-300"
+              className="w-full bg-pink-500 mt-10 text-white font-bold px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors duration-300"
             >
               Login 
             </button>
